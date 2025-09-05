@@ -1,6 +1,5 @@
 package io.github.anjoismysign.agentutils;
 
-import dev.langchain4j.agentic.AgenticServices;
 import io.github.anjoismysign.agentutils.task.GenerateSourceTreeRecursive;
 import org.jetbrains.annotations.NotNull;
 
