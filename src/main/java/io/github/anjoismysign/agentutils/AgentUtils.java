@@ -5,19 +5,17 @@ import org.jetbrains.annotations.NotNull;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
+import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.time.Duration;
 import java.time.Instant;
+import java.util.Objects;
 
-public class AgentUtils {
-
-    public static void main(String[] args) {
-        File file = new File("/Users/luisbenavides-naranjo/Documents/Cline/agent-utils/src");
-        Instant now = Instant.now();
-        System.out.println(new AgentUtils().generateSourceTreeRecursive(file.toPath()));
-        Instant then = Instant.now();
-
-    }
+public enum AgentUtils {
+    INSTANCE;
 
     /**
      * Generates a source tree representation of a directory using java.nio.file.Path.
